@@ -21,7 +21,9 @@
     "dotenv": "^16.4.7",
     "eslint-config-prettier": "^10.0.1",
     "express": "^4.21.2",
+    "http-status": "^2.1.0",
     "mongoose": "^8.10.0",
+    "ts-node-dev": "^2.0.0",
     "typescript": "^5.7.3"
   },
   "devDependencies": {
