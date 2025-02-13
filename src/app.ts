@@ -3,6 +3,7 @@ import cors from "cors";
 import cockieParser from "cookie-parser";
 import path from "path";
 import notFound from "./app/middleware/notFound";
+import globalErrorHandler from "./app/middleware/globalErrorHandlers";
 
 const app: Application = express();
 
@@ -35,7 +36,7 @@ app.get('*', (req: Request, res: Response) => {
 });
 
 // global error handler
-// app.use(globalErrorHandler);
+app.use(globalErrorHandler);
 
 // not found route
 app.use(notFound);
