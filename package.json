@@ -1,0 +1,30 @@
+{
+  "name": "blood-bazar-backend",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start:prod": "node ./dist/server.js",
+    "start:dev": "npx ts-node-dev --respawn --transpile-only src/server.ts",
+    "lint": "eslint src --ignore-path .eslintignore --ext .ts",
+    "build": "tsc",
+    "lint:fix": " npx eslint src --fix",
+    "prettier": "prettier --ignore-path .gitignore --write \"./src/**/*.+(js|ts|json)\"",
+    "prettier:fix": "npx prettier --write src",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "-": "^0.0.1",
+    "@types/cors": "^2.8.17",
+    "cookie-parser": "^1.4.7",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "mongoose": "^8.10.0",
+    "typescript": "^5.7.3"
+  },
+  "devDependencies": {
+    "@types/cookie-parser": "^1.4.8",
+    "@types/express": "^5.0.0"
+  }
+}
