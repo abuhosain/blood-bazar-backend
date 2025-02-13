@@ -1,22 +1,23 @@
 import { Model, Types } from "mongoose";
 import { USER_ROLE } from "./auth.constance";
+ 
 
 export interface IUser {
   _id: Types.ObjectId;
   id?: string;
   referenceId?: string;
   name: string;
-  type: "donor" | "blood_bank";
+  type: "donor" | "blood_bank"; 
   email: string;
   password: string;
   phone: string;
-  role: "admin" | "user";
+  role: "admin" | "user";  
   zila: string;
   upaZila: string;
   address: string;
   image: string;
   bio?: string;
-
+  
   // Donor-specific fields
   lastDonate?: Date;
   bloodGroup?: "A+" | "A-" | "B+" | "B-" | "O+" | "O-" | "AB+" | "AB-";
@@ -26,12 +27,14 @@ export interface IUser {
   // Blood Bank-specific fields
   facebook?: string;
 
+
   // Common system fields
-  isDeleted?: boolean;
-  isBlocked?: boolean;
+  isDeleted: boolean;
+  isBlocked: boolean;
   needsPasswordChange?: boolean;
   passwordChangedAt?: Date;
 }
+
 
 export interface ILoginUser {
   email: string;
